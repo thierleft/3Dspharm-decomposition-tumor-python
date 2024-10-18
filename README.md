@@ -3,7 +3,7 @@
 
 When using this code, you must cite in your own code and publications the following article:
 
-Lefebvre TL et al. (2023) Predicting histopathology markers of endometrial carcinoma with a 
+Lefebvre TL *et al*. (2023) Predicting histopathology markers of endometrial carcinoma with a 
 quantitative image analysis approach based on spherical harmonics in multiparametric MRI.
 Diagnostic and Interventional Imaging 104(3):142-152.
 https://doi.org/10.1016/j.diii.2022.10.007
