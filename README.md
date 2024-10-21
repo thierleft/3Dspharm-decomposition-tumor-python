@@ -32,10 +32,12 @@ This code has five major dependencies.
 
 In addition, the following python packages are required: numpy, scipy, pandas, 
 as well as matlab.engine :
+
 https://pypi.org/project/matlabengine/
+
 https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html 
 
-**INPUT STRUCTURE**
+**INPUT STRUCTURE AND ASSUMPTIONS**
 
 It is assumed that: 
  - Your input images are in nifti format (.nii or .nii.gz) 
@@ -48,7 +50,9 @@ It is assumed that:
  - Each image file has a corresponding segmentation file with the same name, and all
    segmentation files from all patients are stored in a single folder
    specified by variable 'mypathseg' in file demo_SPHARM.ipynb. 
- - This segmentation captures a single connected structure (tumor).
+ - This segmentation captures a single connected structure (tumor). It may contain holes.
+ - The segmentation is a 3D binary mask where each voxel inside the tumor is labeled 1, and
+   other voxels are labeled 0. The segmentation is not a DICOM-RT contour.
  - The folder with segmentations must not be the same folder where images are stored.
  - Both image and segmentation folders must not contain nifti files that do not pertain
    to this analysis, since all nifti files in these folders will be loaded.
